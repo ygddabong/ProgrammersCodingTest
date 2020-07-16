@@ -1,8 +1,8 @@
-package Array;
+package Array.Array_1;
 
 import java.util.Arrays;
 
-public class Array_1 {
+public class Solution {
 
 	public static void main(String[] args) {
 //		array(int[])	
@@ -15,7 +15,7 @@ public class Array_1 {
 
 	}
 
-	class Solution {
+	class solution {
 		public int[] solution(int[] array, int[][] commands) {
 			int[] answer = new int[commands.length];
 
