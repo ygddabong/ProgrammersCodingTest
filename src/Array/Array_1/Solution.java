@@ -2,29 +2,15 @@ package Array.Array_1;
 
 import java.util.Arrays;
 
+/** K번째수 (K-th Number) — https://school.programmers.co.kr/learn/courses/30/lessons/42748 */
 public class Solution {
-
-	public static void main(String[] args) {
-//		array(int[])	
-//		commands(int[][])
-//		Return
-		
-//		[1, 5, 2, 6, 3, 7, 4]
-//		[[2, 5, 3], [4, 4, 1], [1, 7, 3]]
-//		[5, 6, 3]
-
-	}
-
-	class solution {
-		public int[] solution(int[] array, int[][] commands) {
-			int[] answer = new int[commands.length];
-
-			for (int i = 0; i < commands.length; i++) {
-				int[] temp = Arrays.copyOfRange(array, commands[i][0] - 1, commands[i][1]);
-				Arrays.sort(temp);
-				answer[i] = temp[commands[i][2] - 1];
-			}
-			return answer;
+	public int[] solution(int[] array, int[][] commands) {
+		int[] answer = new int[commands.length];
+		for (int i = 0; i < commands.length; i++) {
+			int[] temp = Arrays.copyOfRange(array, commands[i][0] - 1, commands[i][1]);
+			Arrays.sort(temp);
+			answer[i] = temp[commands[i][2] - 1];
 		}
+		return answer;
 	}
 }
